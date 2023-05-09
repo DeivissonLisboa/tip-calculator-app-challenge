@@ -31,14 +31,29 @@
 
         <h2>Select Tip %</h2>
         <div class="tips">
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>25%</button>
-          <button>50%</button>
+          <input type="radio" name="radio-tips" id="five" data-value="5" />
+          <label for="five">5%</label>
+
+          <input type="radio" name="radio-tips" id="ten" data-value="10" />
+          <label for="ten">10%</label>
+
+          <input type="radio" name="radio-tips" id="fifteen" data-value="15" />
+          <label for="fifteen">15%</label>
+
+          <input
+            type="radio"
+            name="radio-tips"
+            id="twenty-five"
+            data-value="25"
+          />
+          <label for="twenty-five">25%</label>
+
+          <input type="radio" name="radio-tips" id="fifty" data-value="50" />
+          <label for="fifty">50%</label>
+
           <input
             type="number"
-            name="custom-tip"
+            name="radio-tips"
             id="custom-tip"
             placeholder="Custom"
           />
