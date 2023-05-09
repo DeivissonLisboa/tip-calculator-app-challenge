@@ -45,6 +45,10 @@ main {
   border-top-right-radius: var(--border-radius);
 }
 
+span {
+  display: block;
+}
+
 h2 {
   color: var(--clr-neutral-500);
   font-size: 1rem;
@@ -96,6 +100,27 @@ input#people {
   background-image: url("../images/icon-person.svg");
 }
 
+span.error {
+  position: relative;
+}
+
+span.error::before {
+  content: "Can't be zero";
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  color: #ff0000;
+}
+
+span.error input {
+  border: 2px solid #ff0000;
+}
+
+input#people.error::after {
+  content: "Can't be zero";
+  /* position: absolute; */
+}
+
 .tips {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -122,6 +147,10 @@ button {
 input[type="radio"]:checked + label {
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-400);
+}
+
+input[type="submit"] {
+  display: none;
 }
 
 .total {
