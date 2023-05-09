@@ -50,7 +50,7 @@ main h2 {
 }
 
 main h2 + * {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -67,7 +67,7 @@ input[type="number"] {
 }
 
 input {
-  height: 3rem;
+  height: 3.25rem;
   width: 100%;
   padding: 1.25rem;
   font-size: var(--fs-400);
@@ -79,6 +79,12 @@ input {
   background-color: var(--clr-neutral-800);
   background-repeat: no-repeat;
   background-position: 1.25rem;
+  cursor: pointer;
+}
+
+input:hover,
+input:focus {
+  outline: 2px solid var(--clr-primary-400);
 }
 
 input#bill {
@@ -87,6 +93,32 @@ input#bill {
 
 input#people {
   background-image: url("../images/icon-person.svg");
+}
+
+.tips {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--clr-neutral-400);
+  font-size: var(--fs-400);
+  text-align: center;
+  color: var(--clr-neutral-900);
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-400);
 }
 
 footer {
